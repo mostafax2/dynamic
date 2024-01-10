@@ -1,0 +1,19 @@
+{
+    "name": "mostafax/dynamic",
+    "description": "to connect dynamic",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mostafax\\Dynamic\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mostafa-elbayyar",
+            "email": "mostafa.m.elbiar@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
