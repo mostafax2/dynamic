@@ -14,4 +14,5 @@ return [
 
 
     'token' => env('DYNAMIC_TOKEN',''),
+    'timeout' => env('DYNAMIC_TIMEOUT',50000),
 ];
