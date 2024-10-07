@@ -11,7 +11,9 @@ class DynamicServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->mergeConfigFrom(
+            __DIR__.'/config/dynamic.php', 'dynamic'
+        );
     }
 
     /**
