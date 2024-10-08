@@ -2,7 +2,7 @@
 
 ```markdown
 # Dynamic Package
-
+```
 Laravel service for connecting with Dynamic API.
 
 To install the package via Composer, run the following command:
