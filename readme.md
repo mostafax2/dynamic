@@ -1,99 +1,79 @@
 
+
+```markdown
 # Dynamic Package
 
-Laravel Service for connect with Dynamic
+Laravel service for connecting with Dynamic API.
 
- 
+To install the package via Composer, run the following command:
 
-
-## Installation
-
-
-
-to install Package by composer
-
-```composer
-  composer require mostafax/dynamic
+```bash
+composer require mostafax/dynamic
 ```
 
-to publish my package
+To publish the package configuration, run:
 
-```composer
-  php artisan vendor:publish 
+```bash
+php artisan vendor:publish
 ```
 
-add this keys to your env file
+Add the following environment variables to your `.env` file:
 
 ```env
-
 DYNAMIC_DOMAIN=http://domain
 DYNAMIC_TOKEN=*******************************
+DYNAMIC_TIMEOUT=60
+DYNAMIC_TOKEN_STATUS='auto' or 'static'
 ```
 
-using namespace
+If you need to generate a token with every request, add these variables as well:
+
+```env
+TENANT_ID=''
+CLIENT_ID=''
+CLIENT_SECRET=''
+RESOURCE=''
+GRANT_TYPE=''
+```
+
+To use the package, include the namespace:
+
 ```php
 use Mostafax\Dynamic\Dynamic;
 ```
-handle date
+
+Handle the request data in the form of an array:
+
 ```php
- $data= [
-            //
-        ]
+$data = [
+    // request parameters
+];
 ```
-to send data with method POST
-```php
-$Dynamic = new Dynamic();
-$Dynamic->postData("API Name",$data);
-``` 
 
-to get data with method GET
-```php
-$Dynamic = new Dynamic();
-
-$Dynamic->getData("API Name",$data);
-``` 
-to collect respones data 
+To send data with a POST request:
 
 ```php
-$Dynamic = new Dynamic();
+$dynamic = new Dynamic();
+$dynamic->postData("API Name", $data);
+```
 
-$response = $Dynamic->getData("API Name",$data);
+To retrieve data with a GET request:
+
+```php
+$dynamic = new Dynamic();
+$dynamic->getData("API Name", $data);
+```
+
+To collect the response data:
+
+```php
+$dynamic = new Dynamic();
+$response = $dynamic->getData("API Name", $data);
 
 $response->collect();
+$response->json();
+$response->body();
+```
 
-``` 
-
-
-
-
- 
- 
-## Authors
-
-- [@mostafax2](https://github.com/mostafax2)
-
-
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`DYNAMIC_DOMAIN`
-
-`DYNAMIC_TOKEN`
-
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
- 
- 
-## Tech Stack
- 
-
-**Server:** PHP, Laravel
-
-
- 
-
-## Support
-
-For support, email mostafa.m.elbiar@gmail.com.
-
+For any further support, email [mostafa.m.elbiar@gmail.com](mailto:mostafa.m.elbiar@gmail.com).
+```

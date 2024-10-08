@@ -12,7 +12,7 @@ class DynamicServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/dynamic.php', 'dynamic'
+            __DIR__.'/../config/dynamic.php', 'dynamic'
         );
     }
 
@@ -22,7 +22,7 @@ class DynamicServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/config/dynamic.php' => config_path('dynamic.php'),
+            __DIR__.'/../config/dynamic.php' => config_path('dynamic.php'),
         ], 'config');
     }
 }
