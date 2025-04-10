@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/mostafaelbayyar/a5f720fd-cdf7-403f-b7aa-1db2af2db75f/a38ed174-088e-4aef-9f18-27b30da7be9f/_apis/work/boardbadge/7c16a641-37a7-4c4f-a3c2-75732cc148de)](https://dev.azure.com/mostafaelbayyar/a5f720fd-cdf7-403f-b7aa-1db2af2db75f/_boards/board/t/a38ed174-088e-4aef-9f18-27b30da7be9f/Microsoft.RequirementCategory)
 
 
 ```markdown
